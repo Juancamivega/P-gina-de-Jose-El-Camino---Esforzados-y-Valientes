@@ -1,4 +1,4 @@
-import { Play, ExternalLink, Share2 } from 'lucide-react';
+import { Play, ExternalLink, Share2, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import VideoPlayer from '@/components/VideoPlayer';
 
