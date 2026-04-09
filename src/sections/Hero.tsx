@@ -81,7 +81,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-[#c9a227]/50 text-white hover:bg-[#c9a227]/10 px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all hover:border-[#c9a227] hover:text-[#c9a227]"
+                className="w-full sm:w-auto border-[#c9a227]/50 bg-transparent text-white hover:bg-[#c9a227]/10 px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all hover:border-[#c9a227] hover:text-[#c9a227]"
               >
                 CONÓCENOS
               </Button>
