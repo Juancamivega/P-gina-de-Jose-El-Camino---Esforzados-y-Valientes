@@ -1,32 +1,4 @@
-import { BookOpen, Heart, Users, Cross, Video } from 'lucide-react';
-
-const features = [
-  {
-    icon: BookOpen,
-    title: 'Enseñanza Bíblica',
-    description: 'Estudiamos la Palabra de Dios con profundidad y revelación para edificar tu fe.',
-  },
-  {
-    icon: Heart,
-    title: 'Amor y Comunidad',
-    description: 'Creamos un ambiente de amor genuino donde cada persona es valorada.',
-  },
-  {
-    icon: Users,
-    title: 'Familia Unida',
-    description: 'Somos una familia espiritual que camina junta en el propósito de Dios.',
-  },
-  {
-    icon: Cross,
-    title: 'Fe y Valentía',
-    description: 'Nos inspiramos en Josué 1:9 para enfrentar la vida con fe y valentía.',
-  },
-];
-
-const socialStats = [
-  { platform: 'Facebook', followers: '42+', icon: Video },
-  { platform: 'Instagram', followers: 'Activo', icon: Video },
-];
+import { BookOpen, Heart } from 'lucide-react';
 
 export default function About() {
   return (

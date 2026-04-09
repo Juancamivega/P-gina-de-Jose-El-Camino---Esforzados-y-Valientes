@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Heart } from 'lucide-react';
+import { Facebook, Instagram, Heart, Phone } from 'lucide-react';
 
 const socialLinks = [
   {
