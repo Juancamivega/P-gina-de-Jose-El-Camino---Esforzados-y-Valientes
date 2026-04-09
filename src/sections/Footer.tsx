@@ -49,17 +49,19 @@ export default function Footer() {
                 de fe y valentía.
               </p>
               <div className="flex space-x-4 mb-8 lg:mb-0">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 ${social.color} rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity`}
+                <a
+                  href="https://wa.me/573002050074"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <button
+                    className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-4 py-2 rounded-lg flex items-center transition-all"
                   >
-                    <social.icon className="w-5 h-5 text-white" />
-                  </a>
-                ))}
+                    <Phone className="w-4 h-4 mr-2" />
+                    CONTACTO
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -112,7 +114,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/17864998073"
+                    href="https://wa.me/573002050074"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/70 hover:text-[#c9a227] transition-colors flex items-center gap-2"

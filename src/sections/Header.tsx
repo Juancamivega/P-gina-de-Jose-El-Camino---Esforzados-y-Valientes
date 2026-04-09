@@ -72,7 +72,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="https://wa.me/17864998073"
+              href="https://wa.me/573002050074"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2"
@@ -127,7 +127,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://wa.me/17864998073"
+              href="https://wa.me/573002050074"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4"

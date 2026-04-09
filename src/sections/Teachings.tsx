@@ -123,30 +123,30 @@ export default function Teachings() {
           </a>
         </div>
 
-        {/* Teachings Grid - Premium Style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {teachings.map((teaching, index) => (
             <div
               key={index}
               className="group bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-50"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
                 <img 
-                  src={`https://img.youtube.com/vi/${teaching.videoId}/maxresdefault.jpg`} 
+                  src={teaching.platform === 'facebook' 
+                    ? (index === 0 ? '/assets/about-community.png' : index === 1 ? '/assets/resources-study.png' : '/assets/hero-bg.png')
+                    : `https://img.youtube.com/vi/${teaching.videoId}/maxresdefault.jpg`} 
                   alt={teaching.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-[#1e3a5f]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                  <a 
-                    href={`https://www.youtube.com/watch?v=${teaching.videoId}`} 
-                    target="_blank"
-                    className="w-16 h-16 bg-[#c9a227] rounded-full flex items-center justify-center text-[#1e3a5f] transform scale-0 group-hover:scale-100 transition-transform duration-500 delay-100 shadow-xl"
-                  >
-                    <Youtube className="w-8 h-8 fill-current" />
-                  </a>
+                  <div className="w-16 h-16 bg-[#c9a227] rounded-full flex items-center justify-center text-[#1e3a5f] transform scale-0 group-hover:scale-100 transition-transform duration-500 delay-100 shadow-xl">
+                    <Play className="w-8 h-8 fill-current" />
+                  </div>
                 </div>
                 <span className="absolute bottom-4 right-4 px-3 py-1 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold rounded-lg lg:opacity-0 group-hover:opacity-100 transition-opacity">
                   {teaching.duration}
+                </span>
+                <span className="absolute top-4 left-4 px-3 py-1 bg-[#c9a227] text-[#1e3a5f] text-[9px] font-bold rounded-lg uppercase tracking-tighter shadow-lg">
+                  {teaching.platform}
                 </span>
               </div>
               <div className="p-8">
@@ -160,7 +160,7 @@ export default function Teachings() {
                   {teaching.description}
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-50">
-                  <span className="text-[10px] font-bold text-gray-400 tracking-widest">YOUTUBE</span>
+                  <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">{teaching.platform}</span>
                   <Share2 className="w-4 h-4 text-gray-300 hover:text-[#c9a227] cursor-pointer transition-colors" />
                 </div>
               </div>

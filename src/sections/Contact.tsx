@@ -7,26 +7,26 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Teléfono',
-    value: '+1 (336) 555-0123',
-    href: 'tel:+13365550123',
+    value: '+57 300 2050074',
+    href: 'tel:+573002050074',
   },
   {
     icon: Mail,
     label: 'Correo',
-    value: 'info@elcamino.org',
-    href: 'mailto:info@elcamino.org',
+    value: 'juancamivega@gmail.com',
+    href: 'mailto:juancamivega@gmail.com',
   },
   {
     icon: MapPin,
     label: 'Ubicación',
-    value: 'Winston-Salem, NC',
+    value: 'Neiva, Huila',
     href: '#',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
     value: 'Escríbenos',
-    href: 'https://wa.me/13365550123',
+    href: 'https://wa.me/573002050074',
   },
 ];
 
