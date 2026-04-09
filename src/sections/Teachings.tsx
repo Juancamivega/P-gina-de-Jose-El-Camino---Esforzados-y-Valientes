@@ -147,7 +147,7 @@ export default function Teachings() {
                 </div>
                 <span className="absolute bottom-4 right-4 px-3 py-1 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold rounded-lg lg:opacity-0 group-hover:opacity-100 transition-opacity">
                   {teaching.duration}
-                </div>
+                </span>
               </div>
               <div className="p-8">
                 <h4
