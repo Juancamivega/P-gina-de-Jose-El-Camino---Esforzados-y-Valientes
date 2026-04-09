@@ -1,19 +1,6 @@
 import { Facebook, Instagram, Heart, Phone } from 'lucide-react';
 
-const socialLinks = [
-  {
-    name: 'Facebook',
-    icon: Facebook,
-    href: 'https://www.facebook.com/profile.php?id=61580457726907',
-    color: 'bg-[#1877F2]',
-  },
-  {
-    name: 'Instagram',
-    icon: Instagram,
-    href: 'https://www.instagram.com/keilaelcamino',
-    color: 'bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]',
-  },
-];
+
 
 const quickLinks = [
   { name: 'Inicio', href: '#inicio' },
