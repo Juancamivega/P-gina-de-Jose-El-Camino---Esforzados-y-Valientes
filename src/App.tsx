@@ -1,4 +1,4 @@
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from './components/ui/sonner';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
 import About from './sections/About';

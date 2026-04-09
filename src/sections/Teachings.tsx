@@ -1,6 +1,6 @@
 import { Play, ExternalLink, Share2, Facebook, Instagram } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import VideoPlayer from '@/components/VideoPlayer';
+import { Button } from '../components/ui/button';
+import VideoPlayer from '../components/VideoPlayer';
 
 const teachings = [
   {
