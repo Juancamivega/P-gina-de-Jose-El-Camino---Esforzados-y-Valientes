@@ -71,7 +71,7 @@ export default function Hero() {
             <a href="#ensenanzas" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-[#c9a227] hover:bg-[#b8941f] text-[#1e3a5f] font-bold px-10 py-7 text-lg rounded-full shadow-[0_10px_30px_-10px_rgba(201,162,39,0.5)] transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto min-w-[240px] h-[72px] bg-[#c9a227] hover:bg-[#b8941f] text-[#1e3a5f] font-black px-10 text-lg rounded-full shadow-[0_10px_30px_-10px_rgba(201,162,39,0.5)] transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
               >
                 <Play className="w-6 h-6 mr-3 fill-current" />
                 VER ENSEÑANZAS
@@ -81,7 +81,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-[#c9a227]/50 bg-transparent text-white hover:bg-[#c9a227]/10 px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all hover:border-[#c9a227] hover:text-[#c9a227]"
+                className="w-full sm:w-auto min-w-[240px] h-[72px] border-[#c9a227] bg-black/20 text-white hover:bg-[#c9a227]/20 px-10 text-lg rounded-full backdrop-blur-md transition-all hover:border-[#ffd75e] hover:text-[#ffd75e] flex items-center justify-center"
               >
                 CONÓCENOS
               </Button>
@@ -91,10 +91,10 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20">
-        <span className="text-white/40 text-[10px] tracking-[0.2em] font-bold uppercase">Descubrir</span>
-        <a href="#nosotros" className="text-white/50 hover:text-[#c9a227] transition-all transform hover:translate-y-1">
-          <ChevronDown className="w-8 h-8 animate-bounce" />
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20">
+        <span className="text-white/30 text-[9px] tracking-[0.3em] font-bold uppercase">Descubrir</span>
+        <a href="#nosotros" className="text-white/40 hover:text-[#c9a227] transition-all transform hover:translate-y-1">
+          <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
 

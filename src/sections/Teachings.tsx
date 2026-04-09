@@ -132,7 +132,7 @@ export default function Teachings() {
               <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
                 <img 
                   src={teaching.platform === 'facebook' 
-                    ? (index === 0 ? '/assets/about-community.png' : index === 1 ? '/assets/resources-study.png' : '/assets/hero-bg.png')
+                    ? (index % 3 === 0 ? '/assets/about-community.png' : index % 3 === 1 ? '/assets/resources-study.png' : '/assets/hero-bg.png')
                     : `https://img.youtube.com/vi/${teaching.videoId}/maxresdefault.jpg`} 
                   alt={teaching.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100"
