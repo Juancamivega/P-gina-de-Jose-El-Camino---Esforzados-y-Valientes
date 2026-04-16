@@ -7,6 +7,7 @@ const quickLinks = [
   { name: 'Nosotros', href: '#nosotros' },
   { name: 'Enseñanzas', href: '#ensenanzas' },
   { name: 'Recursos', href: '#recursos' },
+  { name: 'WhatsApp', href: '#whatsapp' },
   { name: 'Contacto', href: '#contacto' },
 ];
 
@@ -37,16 +38,14 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4 mb-8 lg:mb-0">
                 <a
-                  href="https://wa.me/573002050074"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#whatsapp"
                   className="flex items-center space-x-2"
                 >
                   <button
-                    className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-4 py-2 rounded-lg flex items-center transition-all"
+                    className="bg-[#25D366] hover:bg-[#20b858] text-white px-5 py-2.5 rounded-lg flex items-center transition-all font-bold shadow-md"
                   >
                     <Phone className="w-4 h-4 mr-2" />
-                    CONTACTO
+                    ESCRÍBENOS
                   </button>
                 </a>
               </div>
