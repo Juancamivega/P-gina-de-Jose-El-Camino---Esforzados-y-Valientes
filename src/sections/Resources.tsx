@@ -1,49 +1,49 @@
-import { Download, Book, Calendar, Music, FileText, Video } from 'lucide-react';
+import { FileText, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const resources = [
+
+
+const driveResources = [
   {
-    icon: Book,
-    title: 'Guía de Estudio Bíblico',
-    description: 'Material de estudio para profundizar en la Palabra de Dios.',
-    action: 'Descargar',
-    color: 'bg-blue-500',
+    title: 'Estudios de la Parashá',
+    description: 'Explora nuestros estudios sistemáticos de las porciones semanales de la Torá (Parashá), diseñados para revelar el carácter de Dios y su plan redentor.',
+    image: '/assets/parasha.png',
+    link: 'https://drive.google.com/drive/folders/1VY8s6DZSpkkxtc5eCT54uC138YUSA_sb?usp=sharing',
+    contents: [
+      'Bereshit (Génesis)',
+      'Noaj (Noé)',
+      'Lej Lejá (Vete)',
+      'Vayerá (Y se apareció)',
+      'Jayei Sarah (La vida de Sara)',
+      'Toldot (Generaciones)',
+      'Vayetzé (Y salió)',
+      'Vayishláj (Y envió)',
+      'Vayeshev (Y habitó)',
+      'Vayigash (Y se acercó)',
+      'Vayejí (Y vivió)',
+      'Shemot (Nombres)',
+      'Vaerá (Y aparecí a)',
+      'Bo (Ven)'
+    ],
   },
   {
-    icon: Calendar,
-    title: 'Calendario de Eventos',
-    description: 'Mantente al día con nuestras reuniones y actividades.',
-    action: 'Ver Calendario',
-    color: 'bg-green-500',
-  },
-  {
-    icon: Music,
-    title: 'Alabanzas y Adoración',
-    description: 'Playlist de música para tu tiempo de adoración personal.',
-    action: 'Escuchar',
-    color: 'bg-purple-500',
-  },
-  {
-    icon: FileText,
-    title: 'Notas de Enseñanzas',
-    description: 'Descarga las notas de nuestras enseñanzas semanales.',
-    action: 'Descargar',
-    color: 'bg-orange-500',
-  },
-  {
-    icon: Video,
-    title: 'Series de Video',
-    description: 'Accede a nuestras series de enseñanza completas.',
-    action: 'Ver Series',
-    color: 'bg-red-500',
-  },
-  {
-    icon: Download,
-    title: 'Materiales de Discipulado',
-    description: 'Recursos para crecer en tu caminar con Cristo.',
-    action: 'Descargar',
-    color: 'bg-teal-500',
-  },
+    title: 'Enseñanzas Bíblicas',
+    description: 'Colección de enseñanzas profundas sobre doctrinas, las fiestas del SEÑOR, y la identidad del creyente en el contexto bíblico original.',
+    image: '/assets/ensenanzas.png',
+    link: 'https://drive.google.com/drive/folders/1JGjjEuUFCjZBIekrLjtHeJK8RitfVgLF?usp=sharing',
+    contents: [
+      'El Shofar y el Espíritu',
+      'Doctrinas Extrañas',
+      'Identidad Perdida en Israel',
+      'Yeshúa Junto a Dos Ladrones',
+      'Cronología de la Redención',
+      'El Misterio del Pan y Vino',
+      'Santidad en la Unicidad',
+      'Rosh Jodesh (Inicio de Mes)',
+      'Fiesta de Sucot',
+      'La Bendición del Shabat'
+    ],
+  }
 ];
 
 export default function Resources() {
@@ -77,39 +77,61 @@ export default function Resources() {
           </div>
         </div>
 
-        {/* Resources Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {resources.map((resource, index) => (
-            <div
-              key={index}
-              className="group relative p-10 bg-white rounded-3xl border border-transparent hover:border-[#c9a227]/20 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500"
-            >
-              <div
-                className={`w-16 h-16 ${resource.color} rounded-2xl flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-black/5`}
-              >
-                <resource.icon className="w-8 h-8 text-white" />
+        {/* Featured Drive Resources */}
+        <div className="grid lg:grid-cols-2 gap-10 mb-20">
+          {driveResources.map((resource, index) => (
+            <div key={index} className="bg-white rounded-3xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] overflow-hidden group flex flex-col border border-gray-100 hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.2)] transition-all duration-500">
+              <div className="relative h-72 overflow-hidden">
+                <img 
+                  src={resource.image} 
+                  alt={resource.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/90 via-[#1e3a5f]/40 to-transparent opacity-80" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <span className="inline-block px-3 py-1 bg-[#c9a227] text-[#1e3a5f] text-xs font-bold tracking-widest uppercase rounded-md mb-3">
+                    Colección en Drive
+                  </span>
+                  <h3 className="text-3xl font-bold text-white drop-shadow-md leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                    {resource.title}
+                  </h3>
+                </div>
               </div>
-              <h3
-                className="text-2xl font-bold text-[#1e3a5f] mb-4"
-                style={{ fontFamily: 'Cormorant Garamond, serif' }}
-              >
-                {resource.title}
-              </h3>
-              <p className="text-gray-500 mb-8 leading-relaxed">
-                {resource.description}
-              </p>
-              <Button
-                variant="outline"
-                className="w-full border-[#1e3a5f]/20 text-[#1e3a5f] hover:bg-[#1e3a5f] hover:text-white rounded-xl py-6 font-bold transition-all"
-              >
-                <Download className="w-5 h-5 mr-3" />
-                {resource.action}
-              </Button>
-              {/* Subtle accent line */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-[#c9a227] group-hover:w-1/3 transition-all duration-500 rounded-t-full" />
+              <div className="p-8 flex-1 flex flex-col">
+                <p className="text-gray-600 mb-8 leading-relaxed text-lg">
+                  {resource.description}
+                </p>
+                <div className="mb-10 flex-1">
+                  <h4 className="text-sm font-bold text-[#1e3a5f] uppercase tracking-wider mb-5 border-b border-gray-100 pb-3 flex items-center">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Contenido Disponible
+                  </h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
+                    {resource.contents.map((item, i) => (
+                      <li key={i} className="flex items-start text-sm text-gray-500">
+                        <span className="text-[#c9a227] mr-2 text-xl leading-none mt-[-2px]">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <a 
+                  href={resource.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-auto block"
+                >
+                  <Button className="w-full bg-[#1e3a5f] hover:bg-[#152a45] text-white py-7 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all group-hover:-translate-y-1">
+                    ACCEDER A LA CARPETA
+                    <ExternalLink className="w-5 h-5 ml-2" />
+                  </Button>
+                </a>
+              </div>
             </div>
           ))}
         </div>
+
+
 
         {/* Newsletter Section - Premium Styling */}
         <div className="mt-32 max-w-5xl mx-auto">

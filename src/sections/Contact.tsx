@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Correo',
-    value: 'juancamivega@gmail.com',
-    href: 'mailto:juancamivega@gmail.com',
+    value: 'Keilaelcamino@gmail.com',
+    href: 'mailto:Keilaelcamino@gmail.com',
   },
   {
     icon: MapPin,
